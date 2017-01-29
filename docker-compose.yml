@@ -4,5 +4,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    logging:
+      driver: "awslogs"
+      options:
+        awslogs-region: "us-east-1"
+        awslogs-group: "/nearby/server"
+        awslogs-stream: "prod"
     ports:
       - "8080:8080"
