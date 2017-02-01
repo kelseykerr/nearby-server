@@ -8,7 +8,7 @@ services:
       driver: "awslogs"
       options:
         awslogs-region: "us-east-1"
-        awslogs-group: "/nearby/server"
-        awslogs-stream: "prod"
+        awslogs-group: "nearby-server"
+        awslogs-stream-prefix: "prod"
     ports:
       - "8080:8080"
