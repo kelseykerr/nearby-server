@@ -4,11 +4,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    logging:
-      driver: "awslogs"
-      options:
-        awslogs-region: "us-east-1"
-        awslogs-group: "nearby-server"
-        awslogs-stream-prefix: "prod"
     ports:
       - "8080:8080"
+    environment:
+      MONGO_URI: mongodb://nearby-alpha-server:XWiPkxgzfbBTpnhT@cluster0-shard-00-00-rdvis.mongodb.net:27017,cluster0-shard-00-01-rdvis.mongodb.net:27017,cluster0-shard-00-02-rdvis.mongodb.net:27017/nearby-alpha?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin
+      MONGO_DB: nearby-alpha
+      FCM_PORT: 5236
+      STRIPE_SECRET_KEY: sk_test_0ZfCmmO2N7mo6JiLsjmfkQ8g
+      STRIPE_PUBLISHABLE_KEY: pk_test_XXhtxu1S44u1en0gH6ozoB7t
