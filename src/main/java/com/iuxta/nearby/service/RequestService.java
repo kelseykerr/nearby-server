@@ -218,7 +218,7 @@ public class RequestService {
 
     public void checkLocationIsAvailable(Double latitude, Double longitude) {
         //must be within 10 miles
-        BasicDBObject query = getLocationQuery(latitude, longitude, 10D);
+        BasicDBObject query = getLocationQuery(latitude, longitude, 15D);
         DBCursor availableLocations = availableLocationsCollection.find(query);
         List<NearbyAvailableLocations> locations = availableLocations.toArray();
         availableLocations.close();
