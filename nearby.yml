@@ -20,5 +20,5 @@ swagger:
   swaggerViewConfiguration:
       showAuth: false
 
-stripeSecretKey: ${STRIPE_SECRET_KEY}
-stripePublishableKey: ${STRIPE_PUBLISHABLE_KEY}
+stripeSecretKey: sk_test_0ZfCmmO2N7mo6JiLsjmfkQ8g
+stripePublishableKey: pk_test_XXhtxu1S44u1en0gH6ozoB7t
